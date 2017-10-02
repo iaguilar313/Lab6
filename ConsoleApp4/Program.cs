@@ -37,28 +37,24 @@ namespace ConsoleApp4
 
                     // string pig = userInput.SubString();
                 }
-                String UserChoice;
-                Console.WriteLine("Do you want to roll the dice again? (No/yes)");
-                UserChoice = ReadValidtion();
-                if (UserChoice == "no")
+                
+               
+                if (ReadValidtion() == "no")
                 {
                     ProgramContinue = false;
                 }
-
             }
         }
 
         public static string ReadValidtion ()
         {
-            Console.WriteLine("Do you want to continue? Yes or No");
+            Console.WriteLine("Do you want to roll the dice again? Yes or No");
             string Input= Console.ReadLine().ToLower();
-            while (Input!=
-                "yes" && Input != "no" )
+            while (Input!= "yes" && Input != "no" )
             {
                 Console.WriteLine("Please enter either Yes or No");
                 Input = Console.ReadLine().ToLower();
             }
-
             return Input;
         }
     }
